@@ -15,10 +15,17 @@ Question similarity classification is a problem of distinguishing semantic simil
 All code was done in Python for this project.
 
 
-## Numerical State Estimation of Operating Condition of Power System 
+## Hybrid State Estimation of Power System 
 ### (Individual Project, Georgia Tech)
+State estimation is a process of computing the minimum number of variables in order to obtain the current operating condition of the power system. The traditional power system consists of SCADA measurements that measure voltage and current magnitudes and real and reactive power flows. In this case, the state estimation problem is non-linear, requiring numerical computations.
 
+In the past two decades, phasor measurement units (PMU) technology has been developed that can accurately measures the positive phase sequence voltage and current phasors. However, PMU technology is not yet ubiquitous in the power system. This creates a system that has a mixture of SCADA and PMU instruments, known as the hybrid state estimation problem.
 
+Given a five bus substation system as a study, I used the approach of combining both SCADA and phasor measurements in one problem and computed the solution as a non-linear problem. This approach is based on the ["Supercalibrator" concept](http://ieeexplore.ieee.org/document/5589997/) by Prof Sakis Meliopoulos, where the states of an individual substation and interconnecting buses are computed locally to be sent to a central control station.
+
+The accuracy was evaluated by taking the normalized residuals and chi-square test.
+
+All code was done in MATLAB for this project.
 
 ## Danielson-Lanczos 2D FFT algorithm with MPI and PThreads 
 ### (Individual Project, Georgia Tech)
