@@ -39,6 +39,6 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 
 #
-## Danielson-Lanczos 2D FFT algorithm with MPI and PThreads 
+## Danielson-Lanczos 2D FFT with MPI and PThreads 
 #### (Individual Project, Georgia Tech)
 Given an input image, I computed the 2D FFT of the image by applying the Danielson–Lanczos approach for the one–dimensional transforms. Additionally, I implemented message-passing and pthreads.
