@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 These are the abstracts of selected projects that I have undertaken recently.
 
-
+#
 ## Classifying Quora Question-Pair Similarity 
 #### (Group Project, Georgia Tech)
 Classifying if two questions are redundant plays an important role for websites that offer a question-answer service, such as Quora, Stack Exchange, Piazza, and general forums. Quora’s dataset, released January 25th, 2017, consists of binarily labelled question pairs, depending on whether they are effectively asking the same question. 
@@ -14,7 +14,7 @@ Question similarity classification is a problem of distinguishing semantic simil
 
 All code was done in Python for this project.
 
-
+#
 ## Hybrid State Estimation of Power System 
 #### (Individual Project, Georgia Tech)
 State estimation is a process of computing the minimum number of variables in order to obtain the current operating condition of the power system. The traditional power system consists of SCADA measurements that measure voltage and current magnitudes and real and reactive power flows. In this case, the state estimation problem is non-linear, requiring numerical computations.
@@ -28,6 +28,7 @@ The accuracy was evaluated by taking the normalized residuals and chi-square tes
 All code was done in MATLAB for this project.
 
 
+#
 ## Drawing the Mandelbrot Set 
 #### (Individual Project, Georgia Tech)
 Using OpenGL and PThreads in C++, I drew the Mandelbrot Set, with a zoom + history feature and escape iteration of 8000.
@@ -37,6 +38,7 @@ Using OpenGL and PThreads in C++, I drew the Mandelbrot Set, with a zoom + histo
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 
+#
 ## Danielson-Lanczos 2D FFT algorithm with MPI and PThreads 
 #### (Individual Project, Georgia Tech)
 
