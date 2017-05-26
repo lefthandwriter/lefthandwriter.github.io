@@ -33,8 +33,8 @@ All code was done in MATLAB for this project.
 #### (Individual Project, Georgia Tech)
 Using OpenGL and PThreads in C++, I drew the Mandelbrot Set, with a zoom + history feature and escape iteration of 8000.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=JVzF5I_Xweo&t
-" target="_blank"><img src="lefthandwriter.github.io/Mandelbrot.png" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=JVzF5I_Xweo
+" target="_blank"><img src="http://img.youtube.com/vi/JVzF5I_Xweo/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 
