@@ -6,7 +6,7 @@ permalink: /projects/
 These are the abstracts of selected projects that I have undertaken recently.
 
 
-Alt-H2 Classifying Quora Question-Pair Similarity 
+## Classifying Quora Question-Pair Similarity 
 ###(Group Project, Georgia Tech)
 Classifying if two questions are redundant plays an important role for websites that offer a question-answer service, such as Quora, Stack Exchange, Piazza, and general forums. Quora’s dataset, released January 25th, 2017, consists of binarily labelled question pairs, depending on whether they are effectively asking the same question. 
 
@@ -15,11 +15,11 @@ Question similarity classification is a problem of distinguishing semantic simil
 All code was done in Python for this project.
 
 
-Alt-H2 Numerical State Estimation of Operating Condition of Power System 
+## Numerical State Estimation of Operating Condition of Power System 
 ###(Individual Project, Georgia Tech)
 
 
 
-Alt-H2 Danielson-Lanczos 2D FFT algorithm with MPI and PThreads 
+## Danielson-Lanczos 2D FFT algorithm with MPI and PThreads 
 ###(Individual Project, Georgia Tech)
 
