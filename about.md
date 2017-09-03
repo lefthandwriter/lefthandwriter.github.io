@@ -8,4 +8,4 @@ I'm Esther Ling, a graduate student at Georgia Tech in the School of Electrical 
 
 I worked two years with senior college students with MATLAB and previously, blogged here on all things [MATLAB](https://dashboardproject.wordpress.com).
 
-Also, I enjoy reading, as a form of picking other people's brains, or as a way to retire to a quiet spot for reflective thinking. In particular, I occasionally follow Cal Newport, Scott Young and Shane Parrish on their respective blogs.
+Also, I enjoy reading, as a form of picking other people's brains, or as a way to retire to a quiet spot for reflective thinking. In particular, I occasionally follow [Cal Newport](http://calnewport.com/blog/), [Scott Young](https://www.scotthyoung.com/blog/) and [Shane Parrish](https://www.farnamstreetblog.com).
