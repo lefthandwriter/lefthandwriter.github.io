@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Designing an Electric Vehicle Database and using the ChargePoint API
+title: Using the ChargePoint API with Python
 date: 2018-06-22
 categories: software
 icon: rails
 ---
-Here's a short writeup on my recent experience getting data from the ChargePoint API and designing an SQL database for an EV project I'm working on.
+Here's a short post on my recent experience getting data from the ChargePoint API using Zeep in Python. The end-goal was to then design an SQL database based on the type of data returned by the API call, for an EV project I'm working on.
 
 ## Figuring out the API
 First up was to figure out the API. The ChargePoint API is a SOAP API, which was new to me as I'd only worked with REST APIs up to this point. I did a quick lookup to find a software package that I could work with and settled with [Zeep](https://github.com/mvantellingen/python-zeep), a Python package. I found this [tutorial](https://medium.com/@adriennedomingus/using-zeep-to-make-soap-requests-in-python-c575ea0ee954) particularly helpful in getting started with Zeep.
