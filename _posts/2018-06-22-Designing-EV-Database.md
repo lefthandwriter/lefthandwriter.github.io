@@ -3,6 +3,7 @@ layout: post
 title: Using the ChargePoint API with Python
 date: 2018-06-22
 categories: software
+comments: true
 ---
 Here's a short post on my recent experience getting data from the ChargePoint API using Zeep in Python. The end-goal was to then design an SQL database based on the type of data returned by the API call, for an EV project I'm working on.
 
@@ -18,8 +19,6 @@ With the response parameters from the API methods in hand, I laid out all the in
 
 Here's a diagram of the database schema:
 ![Schema]({{ "/assets/databaseSchema.png" | absolute_url }})
-<!-- ![Schema]({{site.url}}{{site.baseurl}}images/databaseSchema.png) -->
-<!-- <img src="{{ http://lefthandwriter.github.io }}images/databaseSchema.png"> -->
 
 ## The code
 I wrote code to pull data from the API and populate the database using SQLite in Python. This was a process of creating the tables -> pull data from the API -> populate the rows in the appropriate table.
@@ -27,5 +26,3 @@ I wrote code to pull data from the API and populate the database using SQLite in
 The code is written in such a way so that the user would enter a range from which to query data from, specified by a startTime and endTime, in Python datetime format. Since the ChargePoint API only allows a maximum of 100 sessions returned per API call, I set it so that it would make one call per day in the range, under the assumption that not more than 100 charging sessions are encountered per day. This works if your organization is relatively small like the one we have at Tech, but you'd need to modify the code otherwise.
 
 I've posted the code on Github [here](https://github.com/lefthandwriter/ChargePointAPI).
-
-
