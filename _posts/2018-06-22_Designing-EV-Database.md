@@ -1,5 +1,11 @@
-# Designing an Electric Vehicle Database and using the ChargePoint API
-Esther Ling, 2018
+---
+layout: post
+title: Designing an Electric Vehicle Database and using the ChargePoint API
+date: 2018-06-22
+categories: software
+icon: rails
+---
+### author: Esther Ling
 
 Here's a short writeup on my recent experience getting data from the ChargePoint API and designing an SQL database for an EV project I'm working on.
 
