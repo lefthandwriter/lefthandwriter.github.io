@@ -18,7 +18,8 @@ With this sorted, I then looked at the [ChargePoint manual](https://na.chargepoi
 With the response parameters from the API methods in hand, I laid out all the information available from an API call, and then designed the SQL database on hand. Basically, I created one table for each of the following entities: station, port, pricing, user, session, and payment. Each of these tables has a primary key, i.e. the station table has the stationID as its primary key, the port table has the portID as its primary key, and so on. I also included foreign keys for cross-referencing between tables, such as the stationID in the session table as a foreign key referencing the stationID in the station table. 
 
 Here's a diagram of the database schema:
-![Schema](ChargePointSchema.png)
+![Schema](https://github.com/lefthandwriter/ChargePointAPI/blob/master/images/databaseSchema.png?raw=true)
+<!-- ![Schema]({{site.url}}{{site.baseurl}}/assets/img/hp_narrators.png) -->
 
 ## The code
 I wrote code to pull data from the API and populate the database using SQLite in Python. This was a process of creating the tables -> pull data from the API -> populate the rows in the appropriate table.
