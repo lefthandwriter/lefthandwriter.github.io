@@ -27,4 +27,4 @@ The code is written in such a way so that the user would enter a range from whic
 
 I've posted the code on Github [here](https://github.com/lefthandwriter/ChargePointAPI).
 
- {% include disqus.html %}
+{% include disqus.html %}
