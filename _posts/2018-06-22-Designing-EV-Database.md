@@ -3,7 +3,6 @@ layout: post
 title: Using the ChargePoint API with Python
 date: 2018-06-22
 categories: software
-icon: rails
 ---
 Here's a short post on my recent experience getting data from the ChargePoint API using Zeep in Python. The end-goal was to then design an SQL database based on the type of data returned by the API call, for an EV project I'm working on.
 
@@ -18,7 +17,7 @@ With this sorted, I then looked at the [ChargePoint manual](https://na.chargepoi
 With the response parameters from the API methods in hand, I laid out all the information available from an API call, and then designed the SQL database on hand. Basically, I created one table for each of the following entities: station, port, pricing, user, session, and payment. Each of these tables has a primary key, i.e. the station table has the stationID as its primary key, the port table has the portID as its primary key, and so on. I also included foreign keys for cross-referencing between tables, such as the stationID in the session table as a foreign key referencing the stationID in the station table. 
 
 Here's a diagram of the database schema:
-![Schema]({{site.url}}/assets/databaseSchema.png)
+![Schema]({{ "/assets/databaseSchema.png" | absolute_url }})
 <!-- ![Schema]({{site.url}}{{site.baseurl}}images/databaseSchema.png) -->
 <!-- <img src="{{ http://lefthandwriter.github.io }}images/databaseSchema.png"> -->
 
