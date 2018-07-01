@@ -38,3 +38,13 @@ exclude:
 
 ## Solves "where did my posts go to" https://jekyllrb.com/docs/upgrading/2-to-3/
 future: true
+
+## To insert an excerpt of posts
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
