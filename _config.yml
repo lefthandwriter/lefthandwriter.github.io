@@ -27,3 +27,5 @@ collections:
   #   permalink: /poetry/:path/
 
 
+## Solves "where did my posts go to" https://jekyllrb.com/docs/upgrading/2-to-3/
+future: true
