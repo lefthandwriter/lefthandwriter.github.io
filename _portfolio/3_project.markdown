@@ -2,7 +2,7 @@
 layout: post
 title: Data Science
 description: working with data
-img:
+img: /img/3_ds.jpg
 ---
 
 I've worked with REST and SOAP based APIs, and designed databases using sqlite.
