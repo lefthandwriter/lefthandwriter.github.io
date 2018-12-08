@@ -29,3 +29,6 @@ collections:
 
 ## Solves "where did my posts go to" https://jekyllrb.com/docs/upgrading/2-to-3/
 future: true
+
+# For building locally
+encoding: utf-8
