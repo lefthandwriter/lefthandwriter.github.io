@@ -10,9 +10,7 @@ I've worked with REST and SOAP based APIs, and designed databases using sqlite.
 A few samples of my work:
 
 # ChargePoint API & SQL Database Design
-[ChargePoint API](https://lefthandwriter.github.io/software/2018/06/22/Designing-EV-Database.html)
-
-I wrote a script to pull data from the ChargePoint API, designed an SQL database to store the data locally, and did an [exploratory analysis](https://github.com/lefthandwriter/ChargePointAPI/blob/master/Notebooks/Exploratory.ipynb) on the usage patterns.
+I wrote a script to pull data from the ChargePoint API, designed an SQL database to store the data locally, and did an [exploratory analysis](https://github.com/lefthandwriter/ChargePointAPI/blob/master/Notebooks/Exploratory.ipynb) on the usage patterns. [Design notes](https://lefthandwriter.github.io/software/2018/06/22/Designing-EV-Database.html).
 
 # Big Datasets
 Master's Thesis - I worked with >135 GB traffic event data from Sensys Networks. This included designing an SQL database for the data.
