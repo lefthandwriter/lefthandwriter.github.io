@@ -1,12 +1,12 @@
 # Site settings
 title: Esther Ling
 email: lingesther@gatech.edu
-description: > # this means to ignore newlines until "baseurl:"
-  Machine Learning Engineer
+# description: > # this means to ignore newlines until "baseurl:"
+description: Research and projects website
 baseurl:  # the subpath of your site, e.g. /blog/
 url: "https://lefthandwriter.github.io" # the base hostname & protocol for your site
 twitter_username: 
-github_username:  lefthandwriter
+github_username: lefthandwriter
 
 # Build settings
 markdown: kramdown
@@ -19,16 +19,14 @@ paginate_path: "/Blog/page:num/"
 
 
 collections:
+    # projects:
+    # output: true
+    # permalink: /Projects/:path/
   portfolio:
     output: true
-    permalink: /Portfolio/:path/
+    permalink: /Projects/:path/
   # poetry:
   #   output: true
   #   permalink: /poetry/:path/
 
 
-## Solves "where did my posts go to" https://jekyllrb.com/docs/upgrading/2-to-3/
-future: true
-
-# For building locally
-encoding: utf-8

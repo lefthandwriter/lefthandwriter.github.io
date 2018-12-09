@@ -1,2 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-15T13:36:30+08:00</updated><id>http://localhost:4000//</id><title type="html">Esther Ling</title><subtitle>Some musings from an electrical engineer.
-</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-08T23:49:27-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Esther Ling</title><subtitle>Research and projects website</subtitle><author><name>Esther Ling</name><email>lingesther@gatech.edu</email></author><entry><title type="html">Using the ChargePoint API with Python</title><link href="http://localhost:4000/software/2018/06/22/Designing-EV-Database.html" rel="alternate" type="text/html" title="Using the ChargePoint API with Python" /><published>2018-06-22T00:00:00-04:00</published><updated>2018-06-22T00:00:00-04:00</updated><id>http://localhost:4000/software/2018/06/22/Designing-EV-Database</id><content type="html" xml:base="http://localhost:4000/software/2018/06/22/Designing-EV-Database.html">&lt;p&gt;Here’s a short post on my recent experience getting data from the ChargePoint API using Zeep in Python. The end-goal was to then design an SQL database based on the type of data returned by the API call, for an EV project I’m working on.&lt;/p&gt;
+
+&lt;h2 id=&quot;figuring-out-the-api&quot;&gt;Figuring out the API&lt;/h2&gt;
+
+&lt;p&gt;First up was to figure out the API. The ChargePoint API is a SOAP API, which was new to me as I’d only worked with REST APIs up to this point. I did a quick lookup to find a software package that I could work with and settled with &lt;a href=&quot;https://github.com/mvantellingen/python-zeep&quot;&gt;Zeep&lt;/a&gt;, a Python package. I found this &lt;a href=&quot;https://medium.com/@adriennedomingus/using-zeep-to-make-soap-requests-in-python-c575ea0ee954&quot;&gt;tutorial&lt;/a&gt; particularly helpful in getting started with Zeep.&lt;/p&gt;
+
+&lt;p&gt;Next was figuring out the endpoint. The ChargePoint manual that’s available online doesn’t explain this explicitly, but I managed to find the WSDL &lt;a href=&quot;http://volttron.readthedocs.io/en/releases-4.1/specifications/chargepoint_driver.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With this sorted, I then looked at the &lt;a href=&quot;https://na.chargepoint.com/UI/downloads/en/ChargePoint_Web_Services_API_Guide_Ver4.1_Rev4.pdf&quot;&gt;ChargePoint manual&lt;/a&gt; to see the types of methods available for an API call, and the information returned. My goal was to create a local database that stored the stations available in the network and the list of historical charging sessions. The two methods I needed were in Chapter 9 on Usage Analysis, and Chapter 10 on Station Management. Basically, the &lt;code class=&quot;highlighter-rouge&quot;&gt;getChargingSessionData&lt;/code&gt; method returns parameters such as the sessionID, userID, stationID, stationName, startTime, endTime, Energy, and Address, while the &lt;code class=&quot;highlighter-rouge&quot;&gt;getStations&lt;/code&gt; method returns the station information.&lt;/p&gt;
+
+&lt;h2 id=&quot;designing-the-database&quot;&gt;Designing the database&lt;/h2&gt;
+
+&lt;p&gt;With the response parameters from the API methods in hand, I laid out all the information available from an API call, and then designed the SQL database on hand. Basically, I created one table for each of the following entities: station, port, pricing, user, session, and payment. Each of these tables has a primary key, i.e. the station table has the stationID as its primary key, the port table has the portID as its primary key, and so on. I also included foreign keys for cross-referencing between tables, such as the stationID in the session table as a foreign key referencing the stationID in the station table.&lt;/p&gt;
+
+&lt;p&gt;Here’s a diagram of the database schema:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/databaseSchema.png&quot; alt=&quot;Schema&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-code&quot;&gt;The code&lt;/h2&gt;
+
+&lt;p&gt;I wrote code to pull data from the API and populate the database using SQLite in Python. This was a process of creating the tables -&amp;gt; pull data from the API -&amp;gt; populate the rows in the appropriate table.&lt;/p&gt;
+
+&lt;p&gt;The code is written in such a way so that the user would enter a range from which to query data from, specified by a startTime and endTime, in Python datetime format. Since the ChargePoint API only allows a maximum of 100 sessions returned per API call, I set it so that it would make one call per day in the range, under the assumption that not more than 100 charging sessions are encountered per day. This works if your organization is relatively small like the one we have at Tech, but you’d need to modify the code otherwise.&lt;/p&gt;
+
+&lt;p&gt;I’ve posted the code on Github &lt;a href=&quot;https://github.com/lefthandwriter/ChargePointAPI&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+// var disqus_config = function () {
+// this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+// this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+// };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://lefthandwriter.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+&lt;script id=&quot;dsq-count-scr&quot; src=&quot;//lefthandwriter.disqus.com/count.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;</content><author><name>Esther Ling</name><email>lingesther@gatech.edu</email></author><summary type="html">Here’s a short post on my recent experience getting data from the ChargePoint API using Zeep in Python. The end-goal was to then design an SQL database based on the type of data returned by the API call, for an EV project I’m working on.</summary></entry></feed>
