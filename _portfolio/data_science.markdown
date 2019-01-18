@@ -13,3 +13,6 @@ Master's Thesis - I worked with >135 GB traffic event data from Sensys Networks.
 
 # Text Scraping and Analysis
 I did [an analysis](http://nbviewer.jupyter.org/github/lefthandwriter/DataIncProject/blob/master/Notebooks/Mercedes-Benz.ipynb) of Youtube Comments on Mercedez-Benz's Youtube channel. I additionally wrote Python scripts for scraping the comments using the Youtube API, available in this [repository](https://github.com/lefthandwriter/DataIncProject).
+
+# R
+Though I mainly work in Python for data science projects, I've had some experience with R, as shown in this [repository](https://github.com/lefthandwriter/R-programming).
