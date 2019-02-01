@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="header-bar">
-  <h1>Esther Ling</h1>
+  <h1>Blog Posts</h1>
   <br/>
   <hr>
   <br/>
@@ -16,6 +16,7 @@ layout: default
         <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
         <p>{{ post.description }}</p>
+        <div>{{ post.content | truncatehtml | truncatewords: 50 }}</div>
         <br/>
         <hr/>
       </li>
