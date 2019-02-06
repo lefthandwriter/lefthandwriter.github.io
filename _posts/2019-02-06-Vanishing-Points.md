@@ -155,3 +155,6 @@ $$ l_p^T k_\infty = \left[ \begin{array}{ccc}
 
 Hence, any line parallel to $$ l_1 $$ and $$ l_2 $$ intersect at the same point $$ k_\infty $$.
 
+
+
+{% include disqus.html %}
