@@ -6,7 +6,7 @@ permalink: /publications/
 
 ### Conference  
 <br/>
-E. Ling, L. Ratliff, and S. Coogan, “Koopman operator approach for instability detection and mitigation in signalized traffic,” in IEEE International Conference on Intelligent Transportation Systems, Nov 2018, pp. 1297–1302. [[PDF]](/assets/papers/ling2018itsc.pdf) [[Slides]](/assets/presentations/koopman-slides-final.pdf)
+E. Ling, L. Ratliff, and S. Coogan, “Koopman operator approach for instability detection and mitigation in signalized traffic,” in IEEE International Conference on Intelligent Transportation Systems, Nov 2018, pp. 1297–1302. [[PDF]](http://coogan.ece.gatech.edu/papers/pdf/ling2018koopman.pdf) [[Slides]](/assets/presentations/koopman-slides-final.pdf)
 
 ### Thesis  
 <br/>
