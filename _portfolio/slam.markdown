@@ -5,4 +5,4 @@ description: slam
 img:
 ---
 
-I've worked with ORB-SLAM in C++. Code and demo coming soon.
+I've worked with ORB-SLAM in C++. On-going [repository](https://github.com/lefthandwriter/orbslam2).
