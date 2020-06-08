@@ -13,7 +13,7 @@ comments: true
 
 <!-- <picture> -->
 
-We know that train tracks form parallel lines. However, in a thought experiment, if we were to stand on the tracks and observe the two outer rails, they would appear to meet as our glance approaches the horizon. Due to perspective projection, these parallel lines converge at a point called the vanishing point, or, the point at infinity. In this post, I explore the use of homogeneous coordinates for reasoning about the intersection of parallel lines.
+We know that train tracks form parallel lines. However, in a thought experiment, if we were to stand on the tracks and observe the two outer rails, they would appear to meet as our glance approaches the horizon. Due to perspective projection, these parallel lines converge at a point called the vanishing point, or, the point at infinity [1]. In this post, I explore the use of homogeneous coordinates for reasoning about the intersection of parallel lines.
 
 
 #### **Homogeneous Coordinates**
@@ -155,6 +155,11 @@ $$ l_p^T k_\infty = \left[ \begin{array}{ccc}
 
 Hence, any line parallel to $$ l_1 $$ and $$ l_2 $$ intersect at the same point $$ k_\infty $$.
 
+
+#### **References**
+[1] I came across this illustration in the book "How not to be wrong - the power of mathematical thinking" by Jordan Ellenberg.
+
+[2] I credit much of the math in this piece to [these course notes](https://web.stanford.edu/class/cs231a/course_notes/02-single-view-metrology.pdf).
 
 
 {% include disqus.html %}
