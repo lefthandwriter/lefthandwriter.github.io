@@ -4,9 +4,9 @@ title: Publications
 permalink: /publications/
 ---
 
-### Preprints
+### Journal
 <br/>
-E. Ling, L. Zheng, L. Ratliff, and S. Coogan, "Koopman operator applications in signalized traffic systems," arXiv, in submission. [[PDF]](https://arxiv.org/abs/1902.11289)
+E. Ling, L. Zheng, L. Ratliff, S. Coogan, "Koopman operator applications in signalized traffic systems," IEEE Transactions on Intelligent Transportation Systems, 2020
 
 ### Conference  
 <br/>
