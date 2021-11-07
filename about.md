@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I enjoy keeping up with research in computer vision and deep learning. In particular, I'm interested in how Visual SLAM can be used in the context of self-driving cars, and if it makes sense to verify deep neural networks. Recently, I worked as a Software R&D intern at Panasonic Automotive, where I researched computer vision algorithms for object detection and 3D localization.
+I'm a software engineer working on self-driving vehicles, with a general interest in the robotics field. I've worked with factor graphs, map representations and sensor calibration. I also have a keen interest in continually improving my ability to write code that is maintainable, safe and scalable.
 
-I graduated from Georgia Tech with a Master's in Electrical and Computer Engineering. I did a Master's Thesis under [Dr. Samuel Coogan](http://coogan.ece.gatech.edu/index.html), studying low-rank decomposition for application in signalized traffic. This (to date) has resulted in a conference publication.
+I graduated from Georgia Tech with a Master's in Electrical and Computer Engineering. I did a Master's Thesis under [Dr. Samuel Coogan](http://coogan.ece.gatech.edu/index.html), studying low-rank decomposition for application in signalized traffic.
 
 As an aside, I enjoy reading, as a form of picking other people's brains. In particular, I occasionally follow [Cal Newport](http://calnewport.com/blog/), [Scott Young](https://www.scotthyoung.com/blog/) and [Shane Parrish](https://www.farnamstreetblog.com).
 
